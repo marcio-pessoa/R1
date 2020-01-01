@@ -1,4 +1,4 @@
-# r1 Mark I - Rover 1, Change log
+# r1 Mark I - Rover, Change log
 
 ## CHANGELOG
 

@@ -1,4 +1,4 @@
-# r1 Mark I - Rover 1
+# r1 Mark I - Rover
 
 ## Electronics
 
