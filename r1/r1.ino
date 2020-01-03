@@ -9,7 +9,7 @@
  * Contributors: none
  */
 
-#include <Arduino.h>      // Arduino - Main library
+#include <Arduino.h>      // Main library
 #include <Project.h>      // Basic project definitions
 #include <Blinker.h>      // Blink leds nicely
 #include <Timer.h>        // Timer library with nice features
@@ -32,20 +32,24 @@ Project r1("r1",  // Platform
            "Marcio Pessoa <marcio.pessoa@gmail.com>");  // Contact
 
 // Status LED
-Blinker status_led(led_ok_pin);
+Blinker status_led(led_status_pin);
 
 // Teperature sensor
 Temperature lm35;
 Alarm temperature(60,   // Maximum warning
                   70,   // Maximum critical
                   10,   // Minimum warning
-                   5);  // Minimum critical
+                   5);  // Minimum critical  // TODO: Change values
 
 // Check timer
 Timer health_check(health_check_timer * 1000);
 
 // Sensors timer
 Timer sensors_status(sensors_timer * 1000);
+
+// Drivers
+L298 driver_a;
+L298 driver_b;
 
 // Power save options
 Timer standby((unsigned long)standby_timer * 60 * 1000, COUNTDOWN);
@@ -62,6 +66,9 @@ void setup() {
   lm35.attach(lm35_pin);
   temperature.nameWrite("Temperature");
   temperature.unitWrite(" *C");
+  // Drivers
+  driver_a.attach(1, 2, 3, 4);  // TODO: Change pins
+  driver_b.attach(1, 2, 3, 4);  // TODO: Change pins
   // Random number generator seed
   pinMode(random_Seed_pin, INPUT);
   randomSeed(analogRead(random_Seed_pin));
