@@ -2,8 +2,7 @@
 
 ## Firmware
 
-[Filtro de Kalman]
+[Main page]
 
 ---
-
-[Filtro de Kalman]: https://en.wikipedia.org/wiki/Kalman_filter
+[Main page]: ../README.md

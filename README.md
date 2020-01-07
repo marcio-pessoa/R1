@@ -1,8 +1,7 @@
 # r1 Mark I - Rover
 
 ## Introduction
-
-r1m1 (Rover 1 Mark I) is just a 4WD mecanum wheel smart rover.
+r1 is just a 4WD mecanum wheel smart rover.
 
 ## Cloning
 ```

@@ -2,4 +2,8 @@
 
 ## Mechanics
 
+[Main page]
+
 ---
+[Main page]: ../README.md
+
